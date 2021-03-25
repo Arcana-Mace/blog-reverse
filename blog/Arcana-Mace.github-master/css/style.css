@@ -1,0 +1,823 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+@font-face{
+    font-family: 'SegoeUI';
+    src: url(../fonts/SegoeUI.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'SegoeUI';
+    src: url(../fonts/SegoeUI-Bold.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+.body{
+    font-family: 'SegoeUI', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+.wrapper{
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.header{
+    background-image: url(../img/bg1.png);
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.head{
+    text-align: center;
+}
+.logo{
+    width: 135px;
+    height: 135px;
+}
+.title{
+    margin-top: 165px;
+}
+.title h1{
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.title p{
+    color: #ffffffb9;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 415px;
+    text-align: center;
+    margin: 0 auto;
+}
+.element{
+    text-align: center;
+    margin-top: 182px;
+}
+.wrapper-text{
+    background-image: url(../img/vektor.png);
+}
+.box-text{
+    padding-top: 110px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+.description{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: normal;
+    text-align: center;
+}
+.description-text{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: normal;
+    text-align: center;
+    padding-top: 55px;
+}
+.title-h2{
+    padding-top: 110px;
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.box-item-text{
+    width: 925px;
+    display: flex;
+    padding: 90px 0px 120px;
+    margin: 0 auto;
+}
+.description-item{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+}
+.box-item-info{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: normal;
+    padding-top: 30px;
+}
+.work{
+    background-color: #231d42;
+}
+.work-text{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 120px;
+}
+.nav{
+    width: 800px;
+    list-style-type: none;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.nav-link{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffffb9;
+}
+.nav-link-active{
+    border-bottom: 3px solid #685d9f;
+    color: #ffffff;
+}
+.work-photo{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 50px 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+.work-name{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    color: #ffffff;
+    padding-top: 30px;
+}
+.work-option{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffffb9;
+    padding-top: 20px;
+}
+.work-center-btn{
+    text-align: center;
+    padding: 100px 0px 110px 0px;
+}
+.work-btn{
+    background-color:#685d9f ;
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #685d9f;
+    padding: 20px 50px;
+    border-radius: 5px;
+    transition: background-color 1s ease, color 0.2s linear;
+}
+.work-btn:hover{
+    background-color: #30a3f0;
+    color: #ffffff;
+    border: 1px solid #30a3f0;
+}
+.photography{
+    background-image: url(../img/vektor.png);
+}
+.photography-text{
+    width: 760px;
+    margin: 0 auto;
+}
+.photography-option{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    padding:40px 0px 53px;
+    line-height: normal;
+    text-align: center;
+    color: grey;
+}
+.photography-img{
+    margin: 0 auto;
+    padding-top: 5px;
+}
+.photography-grid{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 20px 20px;
+    text-align: center;
+}
+.photography-btn{
+    text-align: center;
+    padding: 110px 0px 110px 0px;
+}
+.photography-work-btn{
+    background-color:#685d9f ;
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #685d9f;
+    padding: 18px 30px;
+    border-radius: 5px;
+    transition: background-color 1s ease, color 0.2s linear;
+}
+.photography-work-btn:hover{
+    background-color: #30a3f0;
+    color: #ffffff;
+    border: 1px solid #30a3f0;
+}
+#form{
+    background-image: url(../img/bg2.png);
+}
+.backend{
+    width: 430px;
+    padding-top: 265px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+}
+.backend-text{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 35px;
+    padding-top: 50px;
+}
+.form-email{
+    width: 600px;
+    display: flex;
+    padding: 45px 0px 265px 0px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.form-input{
+    width: 380px;
+    height: 60px;
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 22px;
+    border-radius: 5px;
+    box-shadow: 0 4px 16px #ccc;
+}
+.form-btn{
+    background-color:#685d9f ;
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px 67px;
+    border: 1px solid #685d9f;
+    border-radius: 5px;
+    transition: background-color 1s ease, color 0.2s linear;
+}
+.form-btn:hover{
+    background-color: #30a3f0;
+    color: #ffffff;
+    border: 1px solid #30a3f0;
+}
+.social{
+    background-image: url(../img/vektor.png);
+    background-size: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.social-icon{
+    display: flex;
+    width: 315px;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.team-social-item > a{
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: grey;
+}
+.team-social-item > a:hover{
+    font-size: 40px;
+}
+.footer-text{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 90px;
+    text-align: center;
+}
+.footer-text-item-type{
+    font-family: 'Segoe UI',sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 25px;
+    text-align: center;
+}
+@media(max-width:978px){
+    .wrapper{
+        max-width: 776px;
+    }
+    .title{
+        margin-top: 120px;
+    }
+    .title h1{
+        font-size: 60px;
+    }
+    .element{
+        margin-top: 162px;
+    }
+    .description{
+        font-size: 25px;
+    }
+    .description-text{
+        font-size: 25px;
+    }
+    .box-item-text{
+        width: 800px;
+        flex-direction: column;
+    }
+    .box-item-info{
+        font-size: 25px;
+        line-height: normal;
+        padding-top: 10px;
+    }
+    .description-item{
+        text-align: center;
+    }
+    .work-photo{
+        max-width: 800;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        padding-top: 0px;
+    }
+    .title-h2{
+        padding-top: 50px;
+        font-size: 60px;
+    }
+    .photography-option{
+        width: 800px;
+        font-size: 20px;
+        padding:40px 20px 53px;
+    }
+    .photography-grid{
+        display: grid;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        grid-gap: 20px 20px;
+        text-align: center;
+    }
+    .backend{
+        width: 430px;
+        padding-top: 120px;
+    }
+    .form-email{
+        padding: 45px 0px 135px 0px;
+    }
+    .social{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .footer-text{
+        padding-top: 50px;
+    }
+}
+@media(max-width:776px){
+    .wrapper{
+        max-width: 776px;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+    .description-text{
+        padding-top: 20px;
+    }
+    .box-item-text{
+        width: 700px;
+        padding: 60px 0px 60px;
+        flex-wrap: wrap;
+    }
+    .title-h2{
+        padding-top: 60px;
+        font-size: 50px;
+    }
+    .work-text{
+        font-size: 20px;
+        padding-top: 60px;
+    }
+    .nav{
+        width: 700px;
+        padding: 50px 0;
+    }
+    .work-photo{
+        width: 700px;
+        grid-gap: 25px 10px;
+    }
+    .work-center-btn{
+        text-align: center;
+        padding: 70px 0px 70px 0px;
+    }
+    .work-btn{
+        font-size: 14px;
+        padding: 20px 30px;
+    }
+    .photography-text{
+        width: 700px;
+    }
+    .photography-option{
+        font-size: 20px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .photography-grid{
+        max-width: 700px;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-gap: 20px 20px;
+    }
+    .photography-btn{
+        padding: 80px 0px 80px 0px;
+    }
+    .photography-work-btn{
+        font-size: 14px;
+        padding: 18px 30px;
+    }
+    .backend{
+        padding-top: 80px;
+    }
+    .form-input{
+        height: 40px;
+        font-size: 18px;
+    }
+    .form-btn{
+        padding: 10px 47px;
+    }
+}
+@media(max-width:576px){
+    html { overflow-x: hidden; }
+    body { overflow-x: hidden; }
+    .wrapper{
+        width: 100%;
+        max-width: 500px;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+    .title{
+        margin-top: 70px;
+    }
+    .title h1{
+        font-size: 40px;
+    }
+    .element{
+        margin-top: 60px;
+    }
+    .box-text{
+        padding-top: 50px;
+    }
+    .title-h2{
+        padding-top: 40px;
+        font-size: 40px;
+    }
+    .description{
+        font-size: 18px;
+    }
+    .description-text{
+        font-size: 20px;
+        padding-top: 25px;
+    }
+    .box-item-text{
+        max-width: 500px;
+        padding-right: 45px;
+        margin-left: 0;
+    }
+    .box-item-info{
+        max-width: 500px;
+        font-size: 18px;
+        padding-top: 10px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .work-text{
+        font-size: 40px;
+        padding-top: 80px;
+    }
+    .nav{
+        text-align: center;
+        max-width: 500px;
+        justify-content: center;
+        padding-right: 30px;
+        flex-wrap: wrap;
+
+    }
+    .nav-link, .nav-link.active{
+        padding: 10px 15px 10px;
+        }
+    .page-work{
+        max-width: 500px;
+     }
+    .work-item{
+        display: none;
+     }
+    .work-center-btn{
+        text-align: center;
+        padding: 10px 0px 70px 0px;
+     }
+    .work-btn{
+        font-size: 14px;
+        padding: 20px 30px;
+   }
+    .photography-text{
+        width: 500px;
+    }
+    .photography-option{
+        font-size: 20px;
+        max-width: 500px;
+        width: 100%;
+        padding-right: 60px;
+        margin: 0 auto;
+    }
+    .photography-grid{
+        max-width: 500px;
+        display: none;
+    }
+    .photography-btn{
+        padding: 40px 0px 80px 0px;
+    }
+    .photography-work-btn{
+        font-size: 14px;
+        padding: 16px 20px;
+    }
+    .backend{
+        padding-top: 80px;
+    }   
+    .form-input{
+        height: 40px;
+        font-size: 18px;
+    }
+    .form-btn{
+        padding: 10px 47px;
+    }
+    #form{
+        max-width: 500px;
+    }
+    .form-email{
+        width: 500px;
+    }
+    .form-suscribe{
+        text-align: center;
+        padding-right: 40px;
+    }
+}
+@media(max-width:414px){
+    html { overflow-x: hidden; }
+    body { overflow-x: hidden; }
+    .wrapper{
+        max-width: 414px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        }
+    .logo{
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+    }
+    .title{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .element-top{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .element{
+        width: 90%;
+        padding-top: 20px;
+        margin: 0 auto;
+    }
+    .title-h2{
+        font-size: 30px;
+       width: 90%;
+       margin: 0 auto;
+    }
+    .box-item-text{
+        width: 90%;
+        padding-left: 40px;
+        margin: 0 auto;
+    }
+    .box-item{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .box-item-info{
+        font-size: 16px;
+        text-align: center;
+        padding-top: 0px;
+        margin: 10px 0;
+    }
+    .work-text{
+        width: 90px;
+        font-size: 30px;
+        margin: 0 auto;
+    }
+    nav{
+        width: 90%;
+    }
+    .nav{
+        width: 90%;
+    }
+    .nav-item{
+        width:100%;
+        padding-top: 10px;
+        padding-left: 60px;
+    }
+    .work-photo{
+        display: none;
+    }
+    .photography{
+        width: 414px;
+        margin: 0 auto;
+    }
+    .photography-text{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .title-h2{
+        width: 90%;
+        font-size: 30px;
+    }
+    .photography-option{
+        width: 90%;
+        font-size: 16px;
+        padding-left: 50px;
+    }
+    .photography-grid{
+        display: none;
+    }
+    #form{
+        width:414px;
+        margin: 0 auto;
+    }
+    .backend{
+        width: 90%;
+    }
+    .backend-text{
+        width:90%;
+        font-size: 16px;
+        line-height: 30px;
+        margin: 0 auto;
+    }
+    .form-email{
+        width: 414px;
+    }
+    .form-suscribe{
+        width: 90%;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+    .form-input{
+        width: 90%;
+        margin: 10px;
+    }
+}
+@media(max-width:375px){
+    html { overflow-x: hidden; }
+    body { overflow-x: hidden; }
+    .wrapper{
+        max-width: 375px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        }
+        .photography{
+            width: 375px;
+            margin: 0 auto;
+        }
+        .photography-text{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .title-h2{
+            width: 90%;
+            font-size: 30px;
+        }
+        .photography-option{
+            width: 90%;
+            font-size: 16px;
+            padding-left: 50px;
+        }
+        .photography-grid{
+            display: none;
+        }
+        #form{
+            width:375px;
+            margin: 0 auto;
+        }
+        .backend{
+            width: 90%;
+        }
+        .backend-text{
+            width:90%;
+            font-size: 16px;
+            line-height: 30px;
+            margin: 0 auto;
+        }
+        .form-email{
+            width: 375px;
+        }
+        .form-suscribe{
+            width: 90%;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+        .form-input{
+            width: 90%;
+            margin: 10px;
+        }
+    }
+@media(max-width:320px){
+    html { overflow-x: hidden; }
+    body { overflow-x: hidden; }
+    .wrapper{
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        }
+        .box-item-text{
+            width: 90%;
+            padding-left: 40px;
+            margin: 0 auto;
+        }
+        .photography{
+            max-width: 320px;
+            text-align: center;
+        }
+        .title-h2{
+            width: 90%;
+            margin:0 auto;
+        }
+        .photography-option{
+            font-size: 16px;
+        }
+        #form{
+            width: 320px;
+            margin: 0 auto;
+        }
+        .backend{
+            width: 90%;
+        }
+        .backend-text{
+            width: 90%;
+            font-size: 16px;
+            line-height: 30px;
+            margin: 0 auto;
+        }
+        .form-email{
+            width: 320px;
+        }
+        .form-suscribe, .form-input{
+            width: 90%;
+            padding-left: 10px;
+        }
+}
